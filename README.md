@@ -45,6 +45,8 @@ likaså en footer. Däremot kommer innehållet i mitten alltid bestå av childre
 Ibland kan useEffect användas i en provider för att hantera olika operationer som kan uppstå när en komponent
 renderas eller när värdena i kontexten förändras.
 
-## Exempel 1:
+## Exempel 1: Hämta data från ett API precis när appen startar 
 Om datan som läggs i kontexten kräver att man laddar data från en API precis när applikationen startar, 
 kan du använda useEffect för att göra detta när provider-komponenten renderas första gången.
+
+## Exempel 2: 
