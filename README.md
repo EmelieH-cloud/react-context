@@ -1,26 +1,17 @@
-# React Context
-## Innehållsförteckning
-- [Skapa Context](#skapa-context)
-- [Skapa Provider](#skapa-provider)
-- [Förstå Children i React](#förstå-children-i-react)
-- [Exempel på AppLayout](#exempel-på-applayout)
+## Sammanfattning
 
----
+### Context: 
+createContext() används för att skapa en "behållare" som kan lagra och dela data i en React-applikation. Detta är användbart för att hantera globalt tillstånd (state).
+Contexten har en Provider-komponent som gör data tillgänglig för andra komponenter.
 
-## Skapa Context
+### Provider: 
+ Providern har två viktiga uppgifter:
+ 1. Att bestämma vilket värde som ska finnas i "lådan" (det vill säga vilket data som ska delas).
+ 2. Att bestämma vilka komponenter som ska få tillgång till det delade värdet i kontexten.
 
-För att hantera globalt state i en React-applikation, kan vi skapa en **Context** med hjälp av `createContext()`.
+### Children: 
+I React är children ett begrepp som refererar till de komponenter som placeras inuti en annan komponent. I denna kod
+används AppLayout för att demonstrera detta tydligt. Med hjälp av AppLayout finns en header som alltid renderas på samma sätt, 
+likaså en footer. Däremot kommer innehållet i mitten alltid bestå av children och därmed vara dynamiskt. 
 
-```javascript
-import { createContext } from "react";
-
-// Skapa en kontext med ett initialt värde av `null`
-const myContext = createContext(null);
-```
-Vad är en Context?
-
-createContext() skapar en "behållare" där vi kan lagra och dela data i vår app. Detta är ett sätt att hantera så kallat globalt state.
-
-Kontexten har en färdig property: Provider. Provider har två viktiga uppgifter:
-- Att bestämma vilket värde som ska finnas i "lådan" (det vill säga vilket data som ska delas).
-- Att bestämma vilka komponenter som ska få tillgång till det delade värdet i kontexten.
+![image](https://github.com/user-attachments/assets/05b33cc3-95a3-45ae-9dbf-a5bd7c13e0eb)
