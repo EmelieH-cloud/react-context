@@ -24,11 +24,11 @@ const AppLayout = ({ children }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FF69B4',
   },
   header: {
     padding: 20,
-    backgroundColor: '#A1CEDC',
+    backgroundColor: '#FF69B4',
     alignItems: 'center',
   },
   content: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     padding: 10,
-    backgroundColor: '#A1CEDC',
+    backgroundColor: '#FF69B4',
     alignItems: 'center',
   },
 });

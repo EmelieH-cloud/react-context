@@ -1,7 +1,9 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
+import React, { useState} from "react";
+
 
 // 1. Skapa kontexten ----------------------------
-const myContext = createContext(null);
+const myContext = createContext(undefined);
 
 /*
 createContext() skapar en context som kan liknas vid en behållare där vi kan lagra och dela data
@@ -20,7 +22,7 @@ I många fall behöver man hantera eller bearbeta data innan man delar det med a
 
 // 2. Skapa providern  ----------------------------
 
-const MyProvider = ({ children }) => {
+export const MyProvider = ({ children }) => {
   const [count, setCount] = useState(0); 
 
   const increment = () => setCount(count + 1); 
@@ -31,6 +33,19 @@ const MyProvider = ({ children }) => {
       {children}  
     </myContext.Provider>
   );
+};
+
+// 3. Skapa hook
+
+export const useMyContext = () => {
+  const context = useContext(myContext);
+
+  // Om context är null betyder det att komponenten inte ligger inuti providern
+  if (!context) {
+    throw new Error('useMyContext måste användas inom en MyProvider');
+  }
+
+  return context; // Returnera värdena från context
 };
 
 /*
@@ -57,6 +72,5 @@ AppLayout. Det är den delen som kommer att fyllas med specifikt innehåll för 
 inte definiera children explicit när du använder AppLayout i en annan komponent. children är en
 inbyggd funktionalitet i React. Den tar automatiskt emot och renderar det innehåll som du placerar mellan öppnings- och 
 stängningstaggarna för AppLayout.
-
 
 */
