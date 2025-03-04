@@ -1,7 +1,6 @@
 import { createContext } from "react";
 
 // 1. Skapa kontexten ----------------------------
-
 const myContext = createContext(null);
 
 /*
@@ -47,6 +46,17 @@ Exempel:
   <h3>Jag med!</h3>
 </MyComponent>
 
+I detta projekt finns en tydlig förklaring av children med hjälp av AppLayout.
+AppLayout-komponenten är en egengjord layoutkomponent som definierar en standardstruktur 
+för alla sidor som använder den.
+
+Den renderar alltid de två gemensamma delarna (sidhuvudet och sidfoten) oavsett var den används.
+
+({children}) som den tar emot däremot är dynamiskt och kan ändras beroende på varifrån man använder
+AppLayout. Det är den delen som kommer att fyllas med specifikt innehåll för den sidan.Du behöver
+inte definiera children explicit när du använder AppLayout i en annan komponent. children är en
+inbyggd funktionalitet i React. Den tar automatiskt emot och renderar det innehåll som du placerar mellan öppnings- och 
+stängningstaggarna för AppLayout.
 
 
 */
