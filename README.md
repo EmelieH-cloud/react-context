@@ -1,5 +1,14 @@
 ## Sammanfattning
 
+Innehåll:
+1. Skapa Context
+2. Skapa Provider
+3. Vad är children
+4. Användning av children i providern
+5. Skapa Hook
+6. Använd Hook från komponent
+7. Varför använder man ibland useEffect i en provider
+
 ### 1. Skapa Context:
 
 ![image](https://github.com/user-attachments/assets/f8052f29-5fcc-4260-89fa-5ed1a1229e0d)
@@ -31,3 +40,6 @@ likaså en footer. Däremot kommer innehållet i mitten alltid bestå av childre
 
 ### 4. Använd hook:
 ![image](https://github.com/user-attachments/assets/9df6c7e0-cf28-4e9a-916f-3b47ce851c10)
+
+### Varför använder man ibland useEffect inuti en provider?
+
