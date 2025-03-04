@@ -53,4 +53,10 @@ Ett bra exempel på detta är att hämta en lista med To-Do-uppgifter från en d
 ![image](https://github.com/user-attachments/assets/196a716d-64e9-4ae8-b865-9a4dddd1212b)
 
 
-## Exempel 2: 
+## Exempel 2: Uppdatera datan som delas
+Låt oss säga att du har en app där användarna kan uppdatera sina Todo-uppgifter. När användaren markerar en Todo som klar,
+vill vi skicka uppdateringen till databasen och uppdatera den globala Todo-listan. Då kan man lägga in så
+att useEffect körs varje gång något förändras i Todo-listan.
+
+![image](https://github.com/user-attachments/assets/eff7575e-8b7f-4758-adfb-79cdd7cdc17e)
+
