@@ -48,5 +48,9 @@ renderas eller när värdena i kontexten förändras.
 ## Exempel 1: Hämta data från ett API precis när appen startar 
 Om datan som läggs i kontexten kräver att man laddar data från en API precis när applikationen startar, 
 kan du använda useEffect för att göra detta när provider-komponenten renderas första gången.
+Ett bra exempel på detta är att hämta en lista med To-Do-uppgifter från en databas när användaren öppnar appen. 
+
+![image](https://github.com/user-attachments/assets/196a716d-64e9-4ae8-b865-9a4dddd1212b)
+
 
 ## Exempel 2: 
